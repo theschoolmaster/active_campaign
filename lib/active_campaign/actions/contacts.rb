@@ -27,7 +27,7 @@ module ActiveCampaign
       end
 
       def contact_find_by_email(email)
-        c = parse_response self.class.get("/contacts?email=#{email}", headers: @headers)
+        c = parse_response self.class.get("/contacts?email=#{CGI::escape(email)}", headers: @headers)
 
         # only grabbing one contact, unwrap and return
         c["contacts"]&.first
