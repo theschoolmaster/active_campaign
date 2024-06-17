@@ -42,7 +42,7 @@ module ActiveCampaign
     include Actions::Fields
     include Actions::Lists
 
-    logger ::Logger.new('log/active_campaign.log'), :debug, :json
+    #logger ::Logger.new('log/active_campaign.log'), :debug, :json
 
     def initialize
       @url = ActiveCampaign.configuration.url
