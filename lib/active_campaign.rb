@@ -60,12 +60,7 @@ module ActiveCampaign
     private
 
     def parse_response(response)
-      parsed = response.parsed_response
-      if response.code == 200
-        parsed
-      else
-        { error: parsed }
-      end
+      response.parsed_response
     end
   end
 
