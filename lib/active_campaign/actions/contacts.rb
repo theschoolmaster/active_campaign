@@ -40,7 +40,7 @@ module ActiveCampaign
       # these should probably get moved but way easier for now
 
       def contact_update_list_status(options = {})
-        parse_response self.class.post("/contactListss", headers: @headers, body: { contactList: options }.to_json)
+        parse_response self.class.post("/contactLists", headers: @headers, body: { contactList: options }.to_json)
       end
 
       def contact_add_note(options = {})
